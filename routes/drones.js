@@ -35,7 +35,11 @@ router.post('/drones/create', (req, res, next) => {
 
 router.get('/drones/:id/edit', (req, res, next) => {
   // Iteration #4: Update the drone
-  // ... your code here
+const { id } = req.params;
+Drone.findById(id)
+.then(droneToEdit => res.render('drones/update-form', { drone: droneToEdit}))
+.catch(err => console,log('Error whoile getting the drone from DB:',err));
+
 });
 
 router.post('/drones/:id/edit', (req, res, next) => {

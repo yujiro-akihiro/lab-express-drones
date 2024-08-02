@@ -1,6 +1,8 @@
 <h1>List of Drones</h1>
 <ul>
   {{#each drones}}
-    <li>Name: {{this.name}}, Propellers: {{this.propellers}}, Max Speed: {{this.maxSpeed}} m/s</li>
+    <li>Name: {{this.name}}, Propellers: {{this.propellers}}, Max Speed: {{this.maxSpeed}} m/s
+        <a href="/drones/{{this._id/edit}}">Edit</a>
+    </li>
   {{/each}}
 </ul>
