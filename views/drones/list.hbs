@@ -1,8 +1,11 @@
-<h1>List of Drones</h1>
-<ul>
+<h1 class="text-center">List of Drones</h1>
+<ul class="list-group">
   {{#each drones}}
-    <li>Name: {{this.name}}, Propellers: {{this.propellers}}, Max Speed: {{this.maxSpeed}} m/s
-        <a href="/drones/{{this._id/edit}}">Edit</a>
+    <li class="list-group-item">
+      <div>Name: {{this.name}}</div>
+      <div>Propellers: {{this.propellers}}</div>
+      <div>Max Speed: {{this.maxSpeed}} m/s</div>
+      <a href="/drones/{{this._id}}/edit" class="btn btn-primary">Edit</a>
     </li>
   {{/each}}
 </ul>
