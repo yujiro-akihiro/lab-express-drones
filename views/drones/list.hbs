@@ -5,7 +5,12 @@
       <div>Name: {{this.name}}</div>
       <div>Propellers: {{this.propellers}}</div>
       <div>Max Speed: {{this.maxSpeed}} m/s</div>
-      <a href="/drones/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+      <div class="d-flex align-items-center mt-2">
+        <a href="/drones/{{this._id}}/edit" class="btn btn-primary">Edit</a>
+        <form action="/drones/{{this._id}}/delete" method="POST" class="ml-1">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
     </li>
   {{/each}}
 </ul>

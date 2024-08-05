@@ -14,9 +14,17 @@ form {
   margin: auto;
 }
 
-/* Button styling */
-button {
-  margin-top: 10px;
+/* Ensure buttons have the same height */
+.btn {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust margin between buttons */
+.btn + .btn {
+  margin-left: 5px;
 }
 
 /* Error message styling */
